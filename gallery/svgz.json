@@ -1,13 +1,10 @@
-<script>
-  fetch('svgz.json')
-    .then(r => r.json())
-    .then(files => {
-      const gallery = document.getElementById('gallery');
-      files.forEach(f => {
-        const img = document.createElement('img');
-        img.src = f;
-        img.alt = f;
-        gallery.appendChild(img);
-      });
-    });
-</script>
+[
+  "gallery/piece 1- unique_page1.svg",
+  "gallery/piece 2-12x_page1.svg",
+  "gallery/piece 2-12x_page2.svg",
+  "gallery/piece 3-20x_page1.svg",
+  "gallery/piece 4-12x_page1.svg",
+  "gallery/piece-5-30x_page1.svg",
+  "gallery/piece-5-30x_page2.svg"
+]
+

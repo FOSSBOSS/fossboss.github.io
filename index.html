@@ -24,7 +24,7 @@
     // GitHub Pages won't let you run server-side code,
     // but you *can* keep a JSON list of your SVGs
     // and update it automatically with a GitHub Action.
-    fetch('svgz.json')
+    fetch('gallery/svgz.json')
       .then(r => r.json())
       .then(files => {
         const gallery = document.getElementById('gallery');

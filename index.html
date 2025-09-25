@@ -10,31 +10,59 @@
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 10px;
     }
+    .gallery a {
+      display: block;
+      border: 1px solid #ccc;
+      padding: 5px;
+      text-align: center;
+      background: #f9f9f9;
+      text-decoration: none;
+      color: #333;
+    }
     .gallery img {
       width: 100%;
       height: auto;
+      display: block;
+    }
+    .gallery span {
+      display: block;
+      margin-top: 5px;
+      font-size: 14px;
+      word-break: break-word;
     }
   </style>
 </head>
 <body>
   <h1>SVG Gallery</h1>
-  <div class="gallery" id="gallery"></div>
-
-  <script>
-    // GitHub Pages won't let you run server-side code,
-    // but you *can* keep a JSON list of your SVGs
-    // and update it automatically with a GitHub Action.
-    fetch('gallery/svgz.json')
-      .then(r => r.json())
-      .then(files => {
-        const gallery = document.getElementById('gallery');
-        files.forEach(f => {
-          const img = document.createElement('img');
-          img.src = f;
-          gallery.appendChild(img);
-        });
-      });
-  </script>
+  <div class="gallery">
+    <a href="gallery/piece 1- unique_page1.svg">
+      <img src="gallery/piece 1- unique_page1.svg" alt="piece 1- unique_page1.svg">
+      <span>piece 1- unique_page1.svg</span>
+    </a>
+    <a href="gallery/piece 2-12x_page1.svg">
+      <img src="gallery/piece 2-12x_page1.svg" alt="piece 2-12x_page1.svg">
+      <span>piece 2-12x_page1.svg</span>
+    </a>
+    <a href="gallery/piece 2-12x_page2.svg">
+      <img src="gallery/piece 2-12x_page2.svg" alt="piece 2-12x_page2.svg">
+      <span>piece 2-12x_page2.svg</span>
+    </a>
+    <a href="gallery/piece 3-20x_page1.svg">
+      <img src="gallery/piece 3-20x_page1.svg" alt="piece 3-20x_page1.svg">
+      <span>piece 3-20x_page1.svg</span>
+    </a>
+    <a href="gallery/piece 4-12x_page1.svg">
+      <img src="gallery/piece 4-12x_page1.svg" alt="piece 4-12x_page1.svg">
+      <span>piece 4-12x_page1.svg</span>
+    </a>
+    <a href="gallery/piece-5-30x_page1.svg">
+      <img src="gallery/piece-5-30x_page1.svg" alt="piece-5-30x_page1.svg">
+      <span>piece-5-30x_page1.svg</span>
+    </a>
+    <a href="gallery/piece-5-30x_page2.svg">
+      <img src="gallery/piece-5-30x_page2.svg" alt="piece-5-30x_page2.svg">
+      <span>piece-5-30x_page2.svg</span>
+    </a>
+  </div>
 </body>
 </html>
-

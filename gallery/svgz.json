@@ -1,0 +1,13 @@
+<script>
+  fetch('svgz.json')
+    .then(r => r.json())
+    .then(files => {
+      const gallery = document.getElementById('gallery');
+      files.forEach(f => {
+        const img = document.createElement('img');
+        img.src = f;
+        img.alt = f;
+        gallery.appendChild(img);
+      });
+    });
+</script>
